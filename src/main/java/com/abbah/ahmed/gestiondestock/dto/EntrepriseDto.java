@@ -24,7 +24,7 @@ public class EntrepriseDto {
 
     }
 
-    public static Entreprise fromEntity(EntrepriseDto entrepriseDto){
+    public static Entreprise toEntity(EntrepriseDto entrepriseDto){
         if(entrepriseDto == null){
             return null;
             // todo throw sxception

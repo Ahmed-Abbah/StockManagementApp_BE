@@ -10,8 +10,6 @@ public class VentesDto {
     //FIXME
     private String code;
 
-
-
     public static Ventes toEntity(VentesDto ventesDto) {
         if (ventesDto == null) {
             return null;
