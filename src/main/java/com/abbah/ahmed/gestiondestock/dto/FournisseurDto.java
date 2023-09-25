@@ -35,6 +35,11 @@ public class FournisseurDto {
             //To Do handle exceptions
         }
 
+        List<CommandeFournisseur> commandeFournisseursTemp = new ArrayList<>();
+        for ( CommandeFournisseurDto com : fournisseurDto.getCommandeFournisseur()){
+            commandeFournisseursTemp.add(CommandeFournisseurDto.toEntity(com));
+        }
+
         Fournisseur fournisseur = new Fournisseur();
         fournisseur.setId(fournisseurDto.getId());
         fournisseur.setNom(fournisseur.getNom());
@@ -43,7 +48,7 @@ public class FournisseurDto {
         fournisseur.setPhoto(fournisseur.getPhoto());
         fournisseur.setEmail(fournisseurDto.getEmail());
         fournisseur.setNumTel(fournisseur.getNumTel());
-        fournisseur.setCommandeFournisseur(FournisseurDto.toEntity(fournisseurDto).getCommandeFournisseur());
+        fournisseur.setCommandeFournisseur(commandeFournisseursTemp);
         return fournisseur;
 
     }
@@ -54,9 +59,9 @@ public class FournisseurDto {
             //To Do handle exceptions
         }
 
-        List<CommandeFournisseurDto> commandeFournisseurs = new ArrayList<>();
+        List<CommandeFournisseurDto> commandeFournisseursDtoTemp = new ArrayList<>();
         for ( CommandeFournisseur com : fournisseur.getCommandeFournisseur()){
-            commandeFournisseurs.add(CommandeFournisseurDto.fromEntity(com);
+            commandeFournisseursDtoTemp.add(CommandeFournisseurDto.fromEntity(com));
         }
 
 
@@ -68,7 +73,7 @@ public class FournisseurDto {
                 .photo(fournisseur.getPhoto())
                 .email(fournisseur.getEmail())
                 .numTel(fournisseur.getNumTel())
-                .commandeFournisseur(commandeFournisseurs)
+                .commandeFournisseur(commandeFournisseursDtoTemp)
                 .build();
 
 

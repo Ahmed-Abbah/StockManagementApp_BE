@@ -1,9 +1,7 @@
 package com.abbah.ahmed.gestiondestock.dto;
 
-import com.abbah.ahmed.gestiondestock.model.LigneCommandeClient;
 import com.abbah.ahmed.gestiondestock.model.LigneCommandeFournisseur;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+
 import lombok.Builder;
 import lombok.Data;
 
@@ -24,7 +22,7 @@ public class LigneCommandeFournisseurDto {
         return LigneCommandeFournisseurDto.builder()
                 .id(ligneCommandeFournisseur.getId())
                 .article(ArticleDto.fromEntity(ligneCommandeFournisseur.getArticle()))
-                //.commandeFournisseur(CommandeFournisseurDto.fromEntity(ligneCommandeFournisseur).getCommandeFournisseur())
+                .commandeFournisseur(CommandeFournisseurDto.fromEntity(ligneCommandeFournisseur.getCommandefournisseur()))
                 .build();
     }
 
@@ -37,7 +35,7 @@ public class LigneCommandeFournisseurDto {
         LigneCommandeFournisseur ligneCommandeFournisseur = new LigneCommandeFournisseur();
         ligneCommandeFournisseur.setId(ligneCommandeFournisseurDto.getId());
         ligneCommandeFournisseur.setArticle(ArticleDto.toEntity(ligneCommandeFournisseurDto.getArticle()));
-        //ligneCommandeFournisseur.setCommandefournisseur();
+        ligneCommandeFournisseur.setCommandefournisseur(CommandeFournisseurDto.toEntity(ligneCommandeFournisseurDto.getCommandeFournisseur()));
 
         return ligneCommandeFournisseur;
     }

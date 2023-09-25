@@ -2,6 +2,7 @@ package com.abbah.ahmed.gestiondestock.dto;
 
 
 import com.abbah.ahmed.gestiondestock.model.CommandeFournisseur;
+import com.abbah.ahmed.gestiondestock.model.LigneCommandeFournisseur;
 import lombok.Builder;
 import lombok.Data;
 import java.time.Instant;
@@ -33,6 +34,11 @@ public class CommandeFournisseurDto {
             //todo handle exceptions
         }
 
+        List<LigneCommandeFournisseurDto> ligneCommandeFournisseurTemp = new ArrayList<>();
+        for ( LigneCommandeFournisseur com : commandeFournisseur.getLigneCommandeFourniseurs()){
+            ligneCommandeFournisseurTemp.add(LigneCommandeFournisseurDto.fromEntity(com));
+        }
+
         return CommandeFournisseurDto.builder()
                 .id(commandeFournisseur.getId())
                 .code(commandeFournisseur.getCode())
@@ -48,6 +54,10 @@ public class CommandeFournisseurDto {
             //todo handle exceptions
         }
 
+        List<LigneCommandeFournisseur> ligneCommandeFournisseurDtoTemp = new ArrayList<>();
+        for ( LigneCommandeFournisseurDto com : commandeFournisseurDto.getLigneCommandeFourniseurs()){
+            ligneCommandeFournisseurDtoTemp.add(LigneCommandeFournisseurDto.toEntity(com));
+        }
 
         CommandeFournisseur commandeFournisseur = new CommandeFournisseur();
         commandeFournisseur.setId(commandeFournisseurDto.getId());
