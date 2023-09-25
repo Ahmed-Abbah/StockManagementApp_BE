@@ -39,7 +39,7 @@ public class LigneVenteDto {
     public static LigneVente toEntity(LigneVenteDto ligneVenteDto){
         if(ligneVenteDto == null){
             return null;
-            // todo throw sxception
+            // todo throw exception
         }
 
         LigneVente ligneVente = new LigneVente();
