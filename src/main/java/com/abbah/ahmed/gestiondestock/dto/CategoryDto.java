@@ -2,9 +2,6 @@ package com.abbah.ahmed.gestiondestock.dto;
 
 import com.abbah.ahmed.gestiondestock.model.Article;
 import com.abbah.ahmed.gestiondestock.model.Category;
-import com.abbah.ahmed.gestiondestock.model.CommandeClient;
-import jakarta.persistence.OneToMany;
-
 import lombok.Builder;
 import lombok.Data;
 

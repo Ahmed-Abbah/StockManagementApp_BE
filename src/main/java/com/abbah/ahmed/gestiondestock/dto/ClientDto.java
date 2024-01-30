@@ -3,7 +3,6 @@ package com.abbah.ahmed.gestiondestock.dto;
 
 import com.abbah.ahmed.gestiondestock.model.Client;
 import com.abbah.ahmed.gestiondestock.model.CommandeClient;
-
 import lombok.Builder;
 import lombok.Data;
 

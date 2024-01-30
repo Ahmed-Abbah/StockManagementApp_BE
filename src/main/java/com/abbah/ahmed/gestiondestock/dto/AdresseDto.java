@@ -1,8 +1,8 @@
 package com.abbah.ahmed.gestiondestock.dto;
 
 import com.abbah.ahmed.gestiondestock.model.Adresse;
-import lombok.Data;
 import lombok.Builder;
+import lombok.Data;
 
 @Data
 @Builder

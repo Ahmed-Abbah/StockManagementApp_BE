@@ -1,7 +1,6 @@
 package com.abbah.ahmed.gestiondestock.dto;
 
 import com.abbah.ahmed.gestiondestock.model.Article;
-import com.abbah.ahmed.gestiondestock.model.Category;
 import lombok.Builder;
 import lombok.Data;
 

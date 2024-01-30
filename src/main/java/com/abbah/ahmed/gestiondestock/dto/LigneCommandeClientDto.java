@@ -1,9 +1,6 @@
 package com.abbah.ahmed.gestiondestock.dto;
 
-import com.abbah.ahmed.gestiondestock.model.CommandeClient;
 import com.abbah.ahmed.gestiondestock.model.LigneCommandeClient;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import lombok.Builder;
 import lombok.Data;
 

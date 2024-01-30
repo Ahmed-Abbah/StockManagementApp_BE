@@ -40,7 +40,6 @@ public class UtilisateurValidator {
         if(utilisateurDto == null || !StringUtils.hasLength(utilisateurDto.getMotDePasse())){
             errors.add("Veuillez saisir un mot de passe.");
         }
-
         return errors;
     }
 }

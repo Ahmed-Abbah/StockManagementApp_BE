@@ -1,14 +1,8 @@
 package com.abbah.ahmed.gestiondestock.dto;
 
-import com.abbah.ahmed.gestiondestock.model.Entreprise;
-import com.abbah.ahmed.gestiondestock.model.LigneCommandeFournisseur;
 import com.abbah.ahmed.gestiondestock.model.LigneVente;
-import com.abbah.ahmed.gestiondestock.model.Ventes;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import lombok.Builder;
 import lombok.Data;
-import org.hibernate.annotations.Loader;
 
 import java.math.BigDecimal;
 @Data
