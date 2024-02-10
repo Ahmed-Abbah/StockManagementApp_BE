@@ -3,6 +3,7 @@ package com.abbah.ahmed.gestiondestock.exception;
 public enum ErrorCodes {
     VENTE_NOT_FOUND(1000),
     ARTICLE_NOT_FOUND(2000),
+    ARTICLE_NOT_VALID(2001),
     CLIENT_NOT_FOUND(3000),
     COMMANDE_CLIENT_NOT_FOUND(4000),
     COMMANDE_FOURNISSEUR_NOT_FOUND(5000),
