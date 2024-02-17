@@ -1,7 +1,6 @@
 package com.abbah.ahmed.gestiondestock.service;
 
 import com.abbah.ahmed.gestiondestock.dto.ArticleDto;
-import com.abbah.ahmed.gestiondestock.model.Article;
 
 import java.util.List;
 
